@@ -1,0 +1,20 @@
+{
+  "contest": {
+    "id": "abc001",
+    "title": "AtCoder Beginner Contest 001",
+    "url": "https://atcoder.jp/contests/abc001"
+  },
+  "tasks": [
+    {
+      "id": "abc001_1",
+      "label": "A",
+      "title": "積雪深差",
+      "url": "https://atcoder.jp/contests/abc001/tasks/abc001_1",
+      "directory": {
+        "path": "a",
+        "testdir": "tests",
+        "submit": "main.py"
+      }
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+    "code-runner.executorMap": {
+        "cpp": "cd $dir && g++ -std=c++23 -DDEBUG $fileName -o $fileNameWithoutExt -I $CPP_ATCODER_LIBRARY -I $CPP_CPP_DUMP && $dir$fileNameWithoutExt",
+        "python": "cd $dir && python3 $fileName"
+    },
+    "code-runner.runInTerminal": true,
+    "C_Cpp.files.exclude": {
+        "**/.vscode": true,
+        "**/.vs": true
+    },
+    "C_Cpp.default.cppStandard": "c++23",
+    "C_Cpp.default.browse.path": [
+        "${env:CPP_ATCODER_LIBRARY}"
+    ],
+    "C_Cpp.default.includePath": [
+        "${env:CPP_ATCODER_LIBRARY}"
+    ]
+}

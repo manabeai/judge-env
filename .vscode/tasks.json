@@ -1,0 +1,33 @@
+{
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "C/C++: g++ アクティブなファイルのビルド",
+            "command": "/usr/bin/g++",
+            "args": [
+                "-std=c++23",
+                "-fdiagnostics-color=always",
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}",
+                "-I",
+                "$CPP_ATCODER_LIBRARY",
+                "-I",
+                "$CPP_CPP_DUMP"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "デバッガーによって生成されたタスク。"
+        }
+    ],
+    "version": "2.0.0"
+}

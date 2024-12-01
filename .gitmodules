@@ -1,0 +1,6 @@
+[submodule ".devcontainer/library/ac-library"]
+	path = .devcontainer/library/ac-library
+	url = https://github.com/atcoder/ac-library.git
+[submodule ".devcontainer/library/cpp-dump"]
+	path = .devcontainer/library/cpp-dump
+	url = https://github.com/philip82148/cpp-dump.git

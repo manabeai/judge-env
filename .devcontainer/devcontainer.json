@@ -1,0 +1,50 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/cpp
+{
+	"name": "C++",
+	"build": {
+		"dockerfile": "Dockerfile"
+	},
+	"features": {
+		"ghcr.io/devcontainers/features/python:1": {
+			"installJupyterlab": true,
+			"version": "latest"
+		}
+	},
+	"remoteEnv": {
+		"WORKSPACE": "/workspaces/Competitive-programming-container",
+		"CPP_ATCODER_LIBRARY": "/workspaces/Competitive-programming-container/.devcontainer/library/ac-library",
+		"CPP_CPP_DUMP": "/workspaces/Competitive-programming-container/.devcontainer/library"
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"formulahendry.code-runner",
+				"ms-toolsai.jupyter-hub",
+				"ms-vscode.cpptools",
+				"danielpinto8zz6.c-cpp-compile-run",
+				"pdconsec.vscode-print"
+			],
+			"settings": {
+				"code-runner.executorMap": {
+					"cpp": "cd $dir && g++ -std=c++23 -DDEBUG $fileName -o $fileNameWithoutExt -I $CPP_ATCODER_LIBRARY && $dir$fileNameWithoutExt",
+					"python": "cd $dir && python3 $fileName"
+				},
+				"C_Cpp.default": {
+					"cppStandard": "c++23",
+					"browse": {
+						"path": [
+							"${default}",
+							"${env:CPP_ATCODER_LIBRARY}"
+						]
+					},
+					"includePath": [
+						"${default}",
+						"${env:CPP_ATCODER_LIBRARY}"
+					]
+				}
+			}
+		}
+	},
+	"postCreateCommand": "sh .devcontainer/setup.sh",
+}
