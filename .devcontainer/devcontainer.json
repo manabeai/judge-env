@@ -27,7 +27,7 @@
 			],
 			"settings": {
 				"code-runner.executorMap": {
-					"cpp": "cd $dir && g++ -std=c++23 -DDEBUG $fileName -o $fileNameWithoutExt -I $CPP_ATCODER_LIBRARY && $dir$fileNameWithoutExt",
+					"cpp": "cd $dir && g++ -std=c++23 -DDEBUG $fileName -o $fileNameWithoutExt.out -I $CPP_ATCODER_LIBRARY -I $CPP_CPP_DUMP && $dir$fileNameWithoutExt",
 					"python": "cd $dir && python3 $fileName"
 				},
 				"C_Cpp.default": {
