@@ -21,6 +21,6 @@ if ! grep -q "^alias ojcp" ~/.bashrc; then
     echo "ojcp alias was added"
 fi
 
-git submodule update --recursive
+git submodule update --init
 
 echo "Setup is done!"
