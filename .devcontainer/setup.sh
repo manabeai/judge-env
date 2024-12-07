@@ -1,5 +1,5 @@
 #!/bin/bash
-cd /workspaces/Competitive-programming-container
+cd /workspaces/judge-env
 
 pip3 install online-judge-tools
 pip3 install git+https://github.com/not522/ac-library-python

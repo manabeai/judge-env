@@ -12,9 +12,9 @@
 		}
 	},
 	"remoteEnv": {
-		"WORKSPACE": "/workspaces/Competitive-programming-container",
-		"CPP_ATCODER_LIBRARY": "/workspaces/Competitive-programming-container/.devcontainer/library/ac-library",
-		"CPP_CPP_DUMP": "/workspaces/Competitive-programming-container/.devcontainer/library"
+		"WORKSPACE": "/workspaces/judge-env",
+		"CPP_ATCODER_LIBRARY": "/workspaces/judge-env/.devcontainer/library/ac-library",
+		"CPP_CPP_DUMP": "/workspaces/judge-env/.devcontainer/library"
 	},
 	"customizations": {
 		"vscode": {
