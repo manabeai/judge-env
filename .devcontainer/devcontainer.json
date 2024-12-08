@@ -46,5 +46,5 @@
 			}
 		}
 	},
-	"postCreateCommand": "sh .devcontainer/setup.sh",
+	"postCreateCommand": "sh .devcontainer/setup.sh"
 }
