@@ -34,8 +34,14 @@ jobs:
         curl -L https://github.com/goss-org/goss/releases/latest/download/dgoss -o /usr/local/bin/dgoss
         chmod +rx /usr/local/bin/dgoss
           
-    - name: Run tests inside container
-      uses: devcontainers/ci@v0.2
+    - name: Build and push Docker image
+      uses: devcontainers/ci@v0.3
       with:
         imageName: ghcr.io/manabeai/judge-env
-        runCmd: dgoss run -v $(pwd)/goss.yaml:/goss/goss.yaml judge-env
+        cacheFrom: ghcr.io/manabeai/judge-env
+        push: always
+
+    - name: Run Goss tests
+      run: |
+        docker pull ghcr.io/manabeai/judge-env
+        dgoss run -v $(pwd)/goss.yaml:/goss/goss.yaml judge-env
