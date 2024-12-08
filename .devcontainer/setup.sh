@@ -23,4 +23,18 @@ fi
 
 git submodule update --init
 
+## githubactions環境であれば以下を実行
+if [ -n "$GITHUB_ACTIONS" ]; then
+    echo "GITHUB_ACTIONS is true. run test jobs"
+
+    sudo curl -LO https://github.com/goss-org/goss/releases/latest/download/goss-linux-amd64 -o /usr/local/bin/goss
+    sudo chmod +rx /usr/local/bin/goss
+        
+    sudo curl -LO https://github.com/goss-org/goss/releases/latest/download/dgoss -o /usr/local/bin/dgoss
+    sudo chmod +rx /usr/local/bin/dgoss
+
+    goss validate
+
+    echo "Goss test is successful!"
+    
 echo "Setup is done!"
