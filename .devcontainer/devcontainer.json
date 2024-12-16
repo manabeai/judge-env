@@ -13,8 +13,8 @@
 	},
 	"remoteEnv": {
 		"WORKSPACE": "/workspaces/judge-env",
-		"CPP_ATCODER_LIBRARY": "/workspaces/judge-env/.devcontainer/library/ac-library",
-		"CPP_CPP_DUMP": "/workspaces/judge-env/.devcontainer/library"
+		"CPP_ATCODER_LIBRARY": "/library/ac-library",
+		"CPP_CPP_DUMP": "/library"
 	},
 	"customizations": {
 		"vscode": {

@@ -1,5 +1,5 @@
 #!/bin/bash
-cd /workspaces/judge-env
+cd /workspaces
 
 pip3 install online-judge-tools
 pip3 install git+https://github.com/not522/ac-library-python
