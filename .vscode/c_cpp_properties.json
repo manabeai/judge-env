@@ -4,7 +4,7 @@
             "name": "Linux",
             "includePath": [
                 "${default}",
-                "${env:CPP_ATCODER_LIBRARY}"
+                "${env:CPP_ATCODER_LIBRARY}/"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/gcc",
