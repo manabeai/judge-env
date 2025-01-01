@@ -13,12 +13,12 @@ mkdir -p .devcontainer/library
 cd .devcontainer/library
 
 if ! grep -q "^alias ojpy" ~/.bashrc; then
-    echo "alias ojpy='oj t -c \"python3 main.py\" -d ./tests'" >> ~/.bashrc
-    echo "ojpy alias was added"
+    echo "alias ojtpy='oj t -c \"python3 main.py\" -d ./tests'" >> ~/.bashrc
+    echo "ojtpy alias was added"
 fi
 if ! grep -q "^alias ojcp" ~/.bashrc; then
-    echo "alias ojcp='g++ main.cpp -std=c++23 -DDEBUG -o main.out -I $CPP_ATCODER_LIBRARY -I $CPP_CPP_DUMP && oj t -c "./main.out" -d tests/'" >> ~/.bashrc
-    echo "ojcp alias was added"
+    echo "alias ojtcp='g++ main.cpp -std=c++17 -DDEBUG -o main.out -I $CPP_ATCODER_LIBRARY -I $CPP_CPP_DUMP && oj t -c "./main.out" -d tests/'" >> ~/.bashrc
+    echo "ojtcp alias was added"
 fi
 
 git submodule update --init
@@ -36,5 +36,6 @@ if [ -n "$GITHUB_ACTIONS" ]; then
     goss validate
 
     echo "Goss test is successful!"
+fi
     
 echo "Setup is done!"

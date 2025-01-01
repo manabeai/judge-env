@@ -8,11 +8,11 @@
 	"features": {
 		"ghcr.io/devcontainers/features/python:1": {
 			"installJupyterlab": true,
-			"version": "latest"
+			"version": "3.11.4"
 		}
 	},
 	"remoteEnv": {
-		"WORKSPACE": "/workspaces/judge-env",
+		"WORKSPACE": "/workspace/judge-env",
 		"CPP_ATCODER_LIBRARY": "/library/ac-library",
 		"CPP_CPP_DUMP": "/library"
 	},
@@ -27,11 +27,11 @@
 			],
 			"settings": {
 				"code-runner.executorMap": {
-					"cpp": "cd $dir && g++ -std=c++23 -DDEBUG $fileName -o $fileNameWithoutExt.out -I $CPP_ATCODER_LIBRARY -I $CPP_CPP_DUMP && $dir$fileNameWithoutExt",
+					"cpp": "cd $dir && g++ -std=c++17 -DDEBUG $fileName -o $fileNameWithoutExt.out -I $CPP_ATCODER_LIBRARY -I $CPP_CPP_DUMP && $dir$fileNameWithoutExt",
 					"python": "cd $dir && python3 $fileName"
 				},
 				"C_Cpp.default": {
-					"cppStandard": "c++23",
+					"cppStandard": "c++17",
 					"browse": {
 						"path": [
 							"${default}",
