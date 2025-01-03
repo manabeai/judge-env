@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/devcontainers/base:ubuntu-20.04 AS base
+FROM mcr.microsoft.com/devcontainers/base:ubuntu AS base
 
 WORKDIR /library
 RUN git clone https://github.com/atcoder/ac-library.git
@@ -8,5 +8,5 @@ RUN apt-get update && apt-get install -y \
     npm \
     gdb
 
-WORKDIR /workspace
+WORKDIR /workspaces
 

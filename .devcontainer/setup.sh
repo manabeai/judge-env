@@ -7,21 +7,16 @@ pip3 install numpy
 
 sudo npm install -g atcoder-cli
 
-cp -r .devcontainer/config/atcoder-cli-nodejs /home/vscode/.config/
+sudo cp -r .devcontainer/config/atcoder-cli-nodejs /home/vscode/.config/
 
-mkdir -p .devcontainer/library
-cd .devcontainer/library
-
-if ! grep -q "^alias ojpy" ~/.bashrc; then
+if ! grep -q "^alias ojtpy" ~/.bashrc; then
     echo "alias ojtpy='oj t -c \"python3 main.py\" -d ./tests'" >> ~/.bashrc
     echo "ojtpy alias was added"
 fi
-if ! grep -q "^alias ojcp" ~/.bashrc; then
-    echo "alias ojtcp='g++ main.cpp -std=c++17 -DDEBUG -o main.out -I $CPP_ATCODER_LIBRARY -I $CPP_CPP_DUMP && oj t -c "./main.out" -d tests/'" >> ~/.bashrc
+if ! grep -q "^alias ojtcp" ~/.bashrc; then
+    echo "alias ojtcp='g++ main.cpp -std=c++23 -DDEBUG -o main.out -I $CPP_ATCODER_LIBRARY -I $CPP_CPP_DUMP && oj t -c "./main.out" -d tests/'" >> ~/.bashrc
     echo "ojtcp alias was added"
 fi
-
-git submodule update --init
 
 ## githubactions環境であれば以下を実行
 if [ -n "$GITHUB_ACTIONS" ]; then
